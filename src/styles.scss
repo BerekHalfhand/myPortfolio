@@ -1,4 +1,36 @@
-/* You can add global styles to this file, and also import other style files */
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+}
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body {
+  background: linear-gradient(135deg, #1f1c2c, #928dab); /* Gradient background */
+  background-attachment: fixed; /* Makes the gradient stay fixed while scrolling */
+  background-size: cover; /* Ensures the gradient always fills the viewport */
+  color: #e0e0e0;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden; /* Prevent horizontal scroll issues */
+}
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1000; /* or any value higher than overlapping elements */
+}
+
+#app-root {
+  min-height: 100%; /* Ensures the content doesn’t shrink the gradient */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+nav ul {
+  @media (max-width: 768px) {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+

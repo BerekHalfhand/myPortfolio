@@ -1,26 +1,88 @@
-.mat-toolbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 20px;
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: linear-gradient(90deg, #1c1e3a, #2a2d50);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  height: 120px; /* Default height */
+  transition: height 0.3s ease, background 0.3s ease;
 
-  .spacer {
-    flex: 1; /* Push navigation links to the right */
+  &.scrolled {
+    height: 70px; /* Shrink on scroll */
+    background: linear-gradient(90deg, #1c1e3a, #1e2046);
   }
 
-  a {
-    color: white;
-    font-weight: bold;
-    margin: 0 10px;
-    text-decoration: none;
-  }
+  .header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    padding: 0 30px;
+    transition: padding 0.3s ease;
 
-  a:hover {
-    text-decoration: underline; /* Add hover effect */
-  }
+    .name-and-title {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 4px;
+      transition: flex-direction 0.3s ease, gap 0.3s ease;
 
-  .logo {
-    font-size: 1.8rem; /* Larger logo font size */
-    font-weight: bold;
+      &.scrolled {
+        flex-direction: row;
+        align-items: center;
+        gap: 12px;
+      }
+
+      h1 {
+        font-size: 2rem;
+        font-weight: bold;
+        color: #ffffff;
+        margin: 0;
+        letter-spacing: 1px;
+        transition: font-size 0.3s ease, letter-spacing 0.3s ease;
+
+        &.scrolled {
+          font-size: 1.4rem;
+          letter-spacing: 0.5px;
+        }
+      }
+
+      h2 {
+        font-size: 1rem;
+        font-weight: 300;
+        color: #b3b3b3;
+        margin: 0;
+        transition: font-size 0.3s ease;
+
+        &.scrolled {
+          font-size: 0.8rem;
+        }
+      }
+    }
+
+    nav {
+      ul {
+        display: flex;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        gap: 20px;
+
+        li {
+          a {
+            text-decoration: none;
+            font-size: 1rem;
+            font-weight: 500;
+            color: #03a9f4;
+            transition: color 0.3s ease, transform 0.2s ease;
+
+            &:hover {
+              color: #ffffff;
+              transform: scale(1.1);
+            }
+          }
+        }
+      }
+    }
   }
 }

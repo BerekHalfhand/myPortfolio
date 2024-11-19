@@ -1,0 +1,82 @@
+#experience {
+  margin-bottom: 60px;
+
+  h3 {
+    font-size: 2.5rem;
+    color: #ffffff;
+    margin-bottom: 30px;
+    text-align: center;
+    text-transform: uppercase;
+    // border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+    padding-bottom: 10px;
+  }
+
+  .experience-list {
+    display: flex;
+    flex-direction: column;
+    gap: 40px; /* Add spacing between each experience */
+  }
+
+  .experience-item {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+
+    .header {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 10px;
+
+      h4 {
+        font-size: 1.5rem;
+        color: #ffffff;
+
+        span {
+          color: #9e9e9e;
+          font-weight: normal;
+        }
+      }
+
+      .location {
+        font-size: 0.9rem;
+        color: #adb5bd;
+        margin-bottom: 5px;
+      }
+
+      .duration {
+        font-size: 0.9rem;
+        color: #c4c4c4;
+      }
+    }
+
+    .description {
+      margin: 10px 0;
+      padding-left: 20px;
+      list-style-type: disc;
+      color: #d3d3d3;
+
+      li {
+        margin-bottom: 5px;
+        font-size: 1.1rem;
+        line-height: 1.6;
+      }
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+
+      .tag {
+        background-color: #2a2a2a;
+        padding: 5px 10px;
+        border-radius: 5px;
+        font-size: 0.9rem;
+        color: #03a9f4;
+        font-weight: bold;
+        text-transform: uppercase;
+      }
+    }
+  }
+}

@@ -1,7 +1,14 @@
-.content {
-  padding: 40px 20px; /* Add padding around the content */
+body {
+  font-family: 'Inter', sans-serif;
+  color: #c4c4c4;
+  background-color: #1a1a1a; /* Change to a darker shade for consistency */
+  margin: 0;
+  padding: 0;
+  line-height: 1.8;
+}
 
-  section {
-    margin-bottom: 60px; /* Add space between sections */
-  }
+.content {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
 }
