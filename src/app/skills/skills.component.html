@@ -1,4 +1,17 @@
-<div *ngFor="let skill of skills" class="skill">
-  <span>{{ skill.name }}</span>
-  <mat-progress-bar mode="determinate" [value]="skill.level"></mat-progress-bar>
-</div>
+<section id="skills">
+  <h3>Skills</h3>
+
+  <div class="skills-category">
+    <h4>Hard Skills</h4>
+    <div class="skills-list">
+      <span *ngFor="let skill of hardSkills" class="skill">{{ skill }}</span>
+    </div>
+  </div>
+
+  <div class="skills-category">
+    <h4>Soft Skills</h4>
+    <div class="skills-list">
+      <span *ngFor="let skill of softSkills" class="skill">{{ skill }}</span>
+    </div>
+  </div>
+</section>

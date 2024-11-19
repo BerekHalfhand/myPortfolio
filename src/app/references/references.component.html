@@ -1,0 +1,11 @@
+<section id="references">
+  <h3>References</h3>
+  <div class="reference-row">
+    <div *ngFor="let ref of references" class="reference-item">
+      <a class="email" [href]="'mailto:' + ref.email">{{ ref.email }}</a>
+      <p class="name">{{ ref.name }}</p>
+      <p class="position">{{ ref.position }}</p>
+      <a class="linkedin" [href]="ref.linkedin" target="_blank">LinkedIn Profile</a>
+    </div>
+  </div>
+</section>

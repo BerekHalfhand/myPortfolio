@@ -1,12 +1,23 @@
-<mat-grid-list cols="2" rowHeight="200px" gutterSize="20px">
-  <mat-grid-tile *ngFor="let project of projects">
-    <mat-card>
-      <mat-card-header>
-        <mat-card-title>{{ project.title }}</mat-card-title>
-      </mat-card-header>
-      <mat-card-content>
-        <p>{{ project.description }}</p>
-      </mat-card-content>
-    </mat-card>
-  </mat-grid-tile>
-</mat-grid-list>
+<section id="projects">
+  <h3>Projects</h3>
+  <div class="project-list">
+    <div *ngFor="let project of projects" class="project-item">
+      <div class="header">
+        <h4>{{ project.title }}</h4>
+        <p class="date">{{ project.date }}</p>
+      </div>
+      <p *ngIf="project.associatedWith" class="associated">
+        Associated with {{ project.associatedWith }}
+      </p>
+      <p class="description">{{ project.description }}</p>
+      <div *ngIf="project.skills" class="skills">
+        <strong>Skills:</strong>
+        <span *ngFor="let skill of project.skills" class="skill">{{ skill }}</span>
+      </div>
+      <a *ngIf="project.link" href="{{ project.link }}" target="_blank" class="project-link">Show project</a>
+      <div *ngIf="project.contributors" class="contributors">
+        <strong>Contributors:</strong> {{ project.contributors.join(', ') }}
+      </div>
+    </div>
+  </div>
+</section>

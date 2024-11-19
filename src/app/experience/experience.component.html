@@ -1,0 +1,18 @@
+<section id="experience">
+  <h3>Work Experience</h3>
+  <div class="experience-list">
+    <div *ngFor="let exp of experiences" class="experience-item">
+      <div class="header">
+        <h4>{{ exp.title }} <span>at {{ exp.company }}</span></h4>
+        <p class="location">{{ exp.location }}</p>
+        <p class="duration">{{ exp.duration }}</p>
+      </div>
+      <ul class="description">
+        <li *ngFor="let point of exp.description">{{ point }}</li>
+      </ul>
+      <div class="tags">
+        <span *ngFor="let tag of exp.tags" class="tag">{{ tag }}</span>
+      </div>
+    </div>
+  </div>
+</section>
