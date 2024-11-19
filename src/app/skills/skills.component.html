@@ -1,1 +1,4 @@
-<p>skills works!</p>
+<div *ngFor="let skill of skills" class="skill">
+  <span>{{ skill.name }}</span>
+  <mat-progress-bar mode="determinate" [value]="skill.level"></mat-progress-bar>
+</div>

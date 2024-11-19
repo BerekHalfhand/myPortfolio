@@ -1,12 +1,26 @@
-html {
-  scroll-behavior: smooth;
-}
+.mat-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
 
-.spacer {
-  flex: 1;
-}
+  .spacer {
+    flex: 1; /* Push navigation links to the right */
+  }
 
-.logo {
-  font-weight: bold;
-  font-size: 1.5rem;
+  a {
+    color: white;
+    font-weight: bold;
+    margin: 0 10px;
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: underline; /* Add hover effect */
+  }
+
+  .logo {
+    font-size: 1.8rem; /* Larger logo font size */
+    font-weight: bold;
+  }
 }

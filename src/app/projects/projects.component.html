@@ -1,1 +1,12 @@
-<p>projects works!</p>
+<mat-grid-list cols="2" rowHeight="200px" gutterSize="20px">
+  <mat-grid-tile *ngFor="let project of projects">
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title>{{ project.title }}</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <p>{{ project.description }}</p>
+      </mat-card-content>
+    </mat-card>
+  </mat-grid-tile>
+</mat-grid-list>

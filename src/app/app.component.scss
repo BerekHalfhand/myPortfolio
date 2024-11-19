@@ -1,16 +1,7 @@
 .content {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  padding: 20px;
-}
+  padding: 40px 20px; /* Add padding around the content */
 
-mat-card {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 10px;
-}
-
-.about-card, .projects-card, .contact-card {
-  background-color: #f5f5f5;
+  section {
+    margin-bottom: 60px; /* Add space between sections */
+  }
 }
